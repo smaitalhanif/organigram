@@ -1,0 +1,223 @@
+<svg id="orgchart"
+     viewBox="0 0 1800 1200"
+     xmlns="http://www.w3.org/2000/svg">
+
+<style>
+
+.node {
+  cursor:pointer;
+}
+
+.box {
+  rx:10;
+  ry:10;
+  stroke:#333;
+  stroke-width:2;
+}
+
+.text {
+  font-family:Arial,sans-serif;
+  font-size:16px;
+  font-weight:bold;
+  text-anchor:middle;
+  dominant-baseline:middle;
+  pointer-events:none;
+}
+
+.yayasan {
+  fill:#27aae1;
+}
+
+.pimpinan {
+  fill:#ffe34d;
+}
+
+.wakasek {
+  fill:#78c257;
+}
+
+.unit {
+  fill:#f39c34;
+}
+
+.siswa {
+  fill:#e53935;
+}
+
+.line {
+  stroke:#555;
+  stroke-width:3;
+  fill:none;
+}
+
+.node:hover .box{
+  filter:brightness(1.1);
+}
+
+</style>
+
+<!-- GARIS -->
+
+<path class="line"
+d="M900 110 V180" />
+
+<path class="line"
+d="M900 240 V320" />
+
+<path class="line"
+d="M900 320 H500" />
+
+<path class="line"
+d="M900 320 H1300" />
+
+<!-- YAYASAN -->
+
+<g class="node"
+   data-id="yayasan"
+   transform="translate(800,50)">
+
+<rect
+ class="box yayasan"
+ width="200"
+ height="60"/>
+
+<text
+ class="text"
+ x="100"
+ y="30">
+
+YAYASAN
+
+</text>
+
+</g>
+
+<!-- MUDIROH -->
+
+<g class="node"
+   data-id="mudiroh"
+   transform="translate(800,180)">
+
+<rect
+ class="box pimpinan"
+ width="200"
+ height="60"/>
+
+<text
+ class="text"
+ x="100"
+ y="30">
+
+MUDIROH
+
+</text>
+
+</g>
+
+<!-- AHIBS -->
+
+<g class="node"
+   data-id="kepala_ahibs"
+   transform="translate(400,320)">
+
+<rect
+ class="box pimpinan"
+ width="220"
+ height="60"/>
+
+<text
+ class="text"
+ x="110"
+ y="30">
+
+KEPALA AHIBS
+
+</text>
+
+</g>
+
+<!-- SMAIT -->
+
+<g class="node"
+   data-id="kepala_smait"
+   transform="translate(1180,320)">
+
+<rect
+ class="box pimpinan"
+ width="220"
+ height="60"/>
+
+<text
+ class="text"
+ x="110"
+ y="30">
+
+KEPALA SMAIT
+
+</text>
+
+</g>
+
+<!-- WAKASEK -->
+
+<g class="node"
+   data-id="waka_kurikulum"
+   transform="translate(950,500)">
+
+<rect
+ class="box wakasek"
+ width="220"
+ height="60"/>
+
+<text
+ class="text"
+ x="110"
+ y="30">
+
+KURIKULUM
+
+</text>
+
+</g>
+
+<g class="node"
+   data-id="waka_kesiswaan"
+   transform="translate(1200,500)">
+
+<rect
+ class="box wakasek"
+ width="220"
+ height="60"/>
+
+<text
+ class="text"
+ x="110"
+ y="30">
+
+KESISWAAN
+
+</text>
+
+</g>
+
+<g class="node"
+   data-id="humas"
+   transform="translate(1450,500)">
+
+<rect
+ class="box unit"
+ width="220"
+ height="60"/>
+
+<text
+ class="text"
+ x="110"
+ y="30">
+
+HUMAS
+
+</text>
+
+</g>
+
+</svg>
