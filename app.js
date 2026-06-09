@@ -57,117 +57,17 @@ function tampilkanDetail(id){
 
 async function init(){
 
-```
+
 await loadData();
 console.log(
  "Jumlah Jabatan:",
  dataJabatan.length
 );
 renderChart();
-```
+
 
 }
 
 
 init();
 
-function buildTree(data){
-
-```
-const map = {};
-
-data.forEach(item=>{
-
-    map[item.id] = {
-        ...item,
-        children:[]
-    };
-
-});
-
-let root = null;
-
-data.forEach(item=>{
-
-    if(!item.parent_id){
-
-        root = map[item.id];
-    }
-    else if(map[item.parent_id]){
-
-        map[item.parent_id]
-            .children
-            .push(map[item.id]);
-    }
-
-});
-
-return root;
-```
-
-}
-
-function renderNode(node){
-
-```
-const div =
-    document.createElement("div");
-
-div.className =
-    "tree-node";
-
-div.dataset.id =
-    node.id;
-
-div.innerHTML = `
-    <div class="node-box">
-        ${node.nama_jabatan}
-    </div>
-`;
-
-div.addEventListener(
-    "click",
-    (e)=>{
-        e.stopPropagation();
-        tampilkanDetail(node.id);
-    }
-);
-
-if(node.children.length){
-
-    const children =
-        document.createElement("div");
-
-    children.className =
-        "children";
-
-    node.children.forEach(child=>{
-
-        children.appendChild(
-            renderNode(child)
-        );
-
-    });
-
-    div.appendChild(children);
-}
-
-return div;
-```
-
-}
-
-function renderChart(){
-
-```
-const root =
-    buildTree(dataJabatan);
-
-document
-  .getElementById("org-chart")
-  .appendChild(
-      renderNode(root)
-  );
-```
-
-}
