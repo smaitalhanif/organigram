@@ -20,3 +20,18 @@ window.onload = async () => {
   });
 
 };
+
+document
+.querySelectorAll('.node')
+.forEach(node => {
+
+  node.addEventListener('click', () => {
+
+    const id =
+      node.dataset.id;
+
+    tampilkanDetail(id);
+
+  });
+
+});
