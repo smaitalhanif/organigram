@@ -59,14 +59,32 @@ async function init(){
 
 
 await loadData();
+
 console.log(
- "Jumlah Jabatan:",
- dataJabatan.length
+  "Jumlah Jabatan:",
+  dataJabatan.length
 );
-renderChart();
+
+document
+  .querySelectorAll(".node")
+  .forEach(node=>{
+
+    node.addEventListener(
+      "click",
+      ()=>{
+
+        tampilkanDetail(
+          node.dataset.id
+        );
+
+      }
+    );
+
+  });
 
 
 }
+
 
 
 init();
