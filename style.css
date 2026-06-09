@@ -278,3 +278,67 @@ height:30px;
 background:#999;
 margin:auto;
 }
+
+.chart-wrapper{
+
+    position:relative;
+
+    overflow:auto;
+
+    min-height:1000px;
+}
+
+#connector-svg{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:1600px;
+    height:900px;
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+#connector-svg line{
+
+    stroke:#555;
+
+    stroke-width:3;
+}
+
+.org-chart{
+
+    position:relative;
+
+    z-index:2;
+
+    min-width:1600px;
+}
+
+.level1{
+    margin-top:20px;
+}
+
+.level2{
+    margin-top:60px;
+}
+
+.level3{
+    margin-top:70px;
+}
+
+.level4{
+    margin-top:80px;
+}
+
+.level5{
+    margin-top:120px;
+}
+
+.level6{
+    margin-top:100px;
+}
