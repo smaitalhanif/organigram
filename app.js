@@ -14,3 +14,47 @@ async function init(){
 }
 
 init();
+function buildTree(data){
+
+    const map = {};
+
+    data.forEach(item=>{
+
+        map[item.id] = {
+
+            text:{
+                name:item.nama_jabatan
+            },
+
+            data:item,
+
+            children:[]
+        };
+
+    });
+
+    let root = null;
+
+    data.forEach(item=>{
+
+        if(!item.parent_id){
+
+            root = map[item.id];
+
+        }
+
+        else{
+
+            map[item.parent_id]
+            .children
+            .push(
+                map[item.id]
+            );
+
+        }
+
+    });
+
+    return root;
+
+}
