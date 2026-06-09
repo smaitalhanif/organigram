@@ -58,3 +58,19 @@ function buildTree(data){
     return root;
 
 }
+function renderTree(data){
+
+    const root =
+        buildTree(data);
+
+    new Treant({
+
+        chart:{
+            container:"#tree"
+        },
+
+        nodeStructure:root
+
+    });
+
+}
