@@ -1,0 +1,25 @@
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+#tree{
+    flex:3;
+    overflow:auto;
+}
+
+#detail{
+    flex:1;
+    border-left:1px solid #ddd;
+    padding:20px;
+}
+
+.node{
+    padding:10px;
+    border-radius:8px;
+}
