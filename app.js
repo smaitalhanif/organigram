@@ -59,7 +59,10 @@ async function init(){
 
 ```
 await loadData();
-
+console.log(
+ "Jumlah Jabatan:",
+ dataJabatan.length
+);
 renderChart();
 ```
 
