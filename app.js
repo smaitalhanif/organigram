@@ -61,7 +61,7 @@ function buildTree(data){
 function renderTree(data){
 
     const root =
-        buildTree(data);
+      buildTree(data);
 
     new Treant({
 
@@ -72,5 +72,78 @@ function renderTree(data){
         nodeStructure:root
 
     });
+
+    setTimeout(()=>{
+
+        attachClickEvents(data);
+
+    },500);
+
+}
+
+function attachClickEvents(data){
+
+    const nodes =
+      document.querySelectorAll(".node");
+
+    nodes.forEach(node=>{
+
+        node.addEventListener("click",function(){
+
+            const nama =
+              this.innerText.trim();
+
+            const jabatan =
+              data.find(
+                x =>
+                x.nama_jabatan === nama
+              );
+
+            if(!jabatan) return;
+
+            tampilkanDetail(jabatan);
+
+        });
+
+    });
+
+}
+
+function tampilkanDetail(j){
+
+    document
+    .getElementById("detail")
+    .innerHTML = `
+
+    <h2>
+      ${j.nama_jabatan}
+    </h2>
+
+    <p>
+      <b>Personel:</b><br>
+      ${j.personel || '-'}
+    </p>
+
+    <p>
+      <b>Tugas:</b><br>
+      ${j.tugas || '-'}
+    </p>
+
+    <p>
+      <b>Wewenang:</b><br>
+      ${j.wewenang || '-'}
+    </p>
+
+    <p>
+      <b>Tanggung Jawab:</b><br>
+      ${j.tanggung_jawab || '-'}
+    </p>
+
+    <p>
+      <b>Masa Jabatan:</b><br>
+      ${j.masa_jabatan || '-'}
+    </p>
+
+    `;
 
 }
